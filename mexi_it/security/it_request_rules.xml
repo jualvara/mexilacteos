@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 Mexilacteos (https://www.mexilacteos.com)
+     License Other propietary -->
+<odoo>
+    <data noupdate="1">
+        <record id="rule_it_request_employee" model="ir.rule">
+            <field name="name">IT Request: Employee</field>
+            <field name="model_id" ref="model_it_request"/>
+            <field name="groups" eval="[(4, ref('mexi_it.group_it_request_employee'))]"/>
+            <field name="domain_force">[("employee_id.user_id", "=", user.id)]</field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="rule_it_request_approver" model="ir.rule">
+            <field name="name">IT Request: Approver</field>
+            <field name="model_id" ref="model_it_request"/>
+            <field name="groups" eval="[(4, ref('mexi_it.group_it_request_approver'))]"/>
+            <field name="domain_force">
+                [("request_type", "in", ["asset", "software"]),
+                 ("state", "in", ["submitted", "approved", "rejected"])]
+            </field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="rule_it_request_it" model="ir.rule">
+            <field name="name">IT Request: IT</field>
+            <field name="model_id" ref="model_it_request"/>
+            <field name="groups" eval="[(4, ref('mexi_it.group_it_request_it'))]"/>
+            <field name="domain_force">
+                ["|",
+                 "&amp;", ("request_type", "=", "support"),
+                         ("state", "in", ["submitted", "in_progress", "done"]),
+                 "&amp;", ("request_type", "in", ["asset", "software"]),
+                         ("state", "in", ["approved", "in_progress", "done"])]
+            </field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+    </data>
+</odoo>

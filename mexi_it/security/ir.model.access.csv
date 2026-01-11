@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_it_request_employee,it.request employee,model_it_request,mexi_it.group_it_request_employee,1,1,1,1
+access_it_request_approver,it.request approver,model_it_request,mexi_it.group_it_request_approver,1,1,0,0
+access_it_request_it,it.request it,model_it_request,mexi_it.group_it_request_it,1,1,0,0
