@@ -1,0 +1,380 @@
+<!-- Copyright 2026 Mexilacteos (https://www.mexilacteos.com)
+    License OPL-1.0 -->
+<odoo>
+    <data>
+        <record id="it_request_view_list" model="ir.ui.view">
+            <field name="name">it.request.view.list</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <list decoration-danger="priority == '2'" 
+                      decoration-warning="priority == '1'" 
+                      decoration-success="state == 'done'"
+                      decoration-muted="state == 'rejected'"
+                      decoration-info="state == 'in_progress'"
+                      decoration-bf="state in ['submitted', 'approved']">
+                    <field name="name" decoration-bf="1"/>
+                    <field name="request_type" widget="badge" 
+                           decoration-info="request_type == 'software'"
+                           decoration-primary="request_type == 'asset'"
+                           decoration-warning="request_type == 'support'"/>
+                    <field name="priority" widget="priority"/>
+                    <field name="state" widget="badge" 
+                           decoration-success="state == 'done'"
+                           decoration-danger="state == 'rejected'"
+                           decoration-info="state == 'in_progress'"
+                           decoration-warning="state in ['submitted', 'approved']"/>
+                    <field name="employee_id" widget="many2one_avatar_user"/>
+                    <field name="department_id"/>
+                    <field name="assigned_it_user_id" widget="many2one_avatar_user"/>
+                    <field name="days_since_creation" string="Days Elapsed"/>
+                    <field name="days_in_current_state" string="Days in State"
+                           decoration-warning="days_in_current_state > 5"
+                           decoration-danger="days_in_current_state > 10"/>
+                    <field name="create_date" widget="date"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="it_request_view_kanban" model="ir.ui.view">
+            <field name="name">it.request.view.kanban</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="state" class="o_kanban_small_column">
+                    <field name="name"/>
+                    <field name="request_type"/>
+                    <field name="state"/>
+                    <field name="priority"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="assigned_it_user_id"/>
+                    <field name="create_date"/>
+                    <field name="days_since_creation"/>
+                    <field name="days_in_current_state"/>
+                    <field name="color"/>
+                    <progressbar field="priority" colors='{"0": "success", "1": "warning", "2": "danger"}'/>
+                    <templates>
+                        <t t-name="card">
+                            <div t-attf-class="oe_kanban_color_#{record.color.raw_value} oe_kanban_card oe_kanban_global_click">
+                                <div class="oe_kanban_content">
+                                    <div class="o_kanban_record_top">
+                                        <div class="o_kanban_record_headings">
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name"/>
+                                            </strong>
+                                            <br/>
+                                            <span class="text-muted">
+                                                <field name="employee_id"/>
+                                            </span>
+                                            <div class="mt-1">
+                                                <small class="text-muted">
+                                                    <i class="fa fa-hourglass-half"/> 
+                                                    <t t-esc="record.days_in_current_state.value"/> days in state
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="o_kanban_record_top_right">
+                                            <field name="priority" widget="priority"/>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_record_body">
+                                        <field name="description" widget="text"/>
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left">
+                                            <span class="badge" t-att-class="record.request_type.raw_value === 'asset' ? 'text-bg-primary' : record.request_type.raw_value === 'software' ? 'text-bg-info' : 'text-bg-warning'">
+                                                <i class="fa fa-tag"/> <field name="request_type"/>
+                                            </span>
+                                            <t t-if="record.department_id.raw_value">
+                                                <span class="badge text-bg-secondary ms-1">
+                                                    <i class="fa fa-building-o"/> <field name="department_id"/>
+                                                </span>
+                                            </t>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <t t-if="record.assigned_it_user_id.raw_value">
+                                                <span class="badge text-bg-dark">
+                                                    <i class="fa fa-user"/> <field name="assigned_it_user_id"/>
+                                                </span>
+                                            </t>
+                                        </div>
+                                    </div>
+                                    <div class="oe_kanban_footer mt-2">
+                                        <div class="o_kanban_footer_left text-muted small">
+                                            <i class="fa fa-clock-o"/> 
+                                            <t t-esc="record.days_since_creation.value"/> days
+                                        </div>
+                                        <div class="oe_kanban_footer_right">
+                                            <t t-if="record.assigned_it_user_id.raw_value">
+                                                <span class="badge text-bg-success">
+                                                    <i class="fa fa-user"/> <field name="assigned_it_user_id"/>
+                                                </span>
+                                            </t>
+                                            <t t-else="">
+                                                <span class="badge text-bg-secondary">
+                                                    <i class="fa fa-user-times"/> Sin asignar
+                                                </span>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="it_request_view_search" model="ir.ui.view">
+            <field name="name">it.request.view.search</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="assigned_it_user_id"/>
+                    <filter name="open_requests" string="Abiertas"
+                            domain="[('state', 'not in', ['done', 'rejected'])]"/>
+                    <filter name="pending_approval" string="Pendientes aprobación"
+                            domain="[('state', '=', 'submitted'), ('request_type', 'in', ['asset', 'software'])]"/>
+                    <filter name="support_to_take" string="Soporte por tomar"
+                            domain="[('state', '=', 'submitted'), ('request_type', '=', 'support')]"/>
+                    <filter name="in_progress" string="En proceso"
+                            domain="[('state', '=', 'in_progress')]"/>
+                    <group expand="0" string="Agrupar por">
+                        <filter name="group_state" string="Estado" context="{'group_by': 'state'}"/>
+                        <filter name="group_request_type" string="Tipo" context="{'group_by': 'request_type'}"/>
+                        <filter name="group_assigned" string="Asignado a" context="{'group_by': 'assigned_it_user_id'}"/>
+                        <filter name="group_department" string="Department" context="{'group_by': 'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="it_request_view_form" model="ir.ui.view">
+            <field name="name">it.request.view.form</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_submit" type="object" string="Submit" class="oe_highlight"
+                                groups="mexi_it.group_it_request_employee"
+                                modifiers='{"invisible": [["state", "!=", "draft"]]}'/>
+                        <button name="action_approve" type="object" string="Approve" class="oe_highlight"
+                                groups="mexi_it.group_it_request_approver"
+                                modifiers='{"invisible": ["|", ["state", "!=", "submitted"], ["request_type", "not in", ["asset", "software"]]]}'/>
+                        <button name="action_reject" type="object" string="Reject"
+                                groups="mexi_it.group_it_request_approver"
+                                modifiers='{"invisible": ["|", ["state", "!=", "submitted"], ["request_type", "not in", ["asset", "software"]]]}'/>
+                        <button name="action_start" type="object" string="Start" class="oe_highlight"
+                            groups="mexi_it.group_it_request_it"
+                            modifiers='{"invisible": ["|", ["&amp;", ["request_type", "=", "support"], ["state", "!=", "submitted"]], ["&amp;", ["request_type", "!=", "support"], ["state", "!=", "approved"]]]}'/>
+                        <button name="action_done" type="object" string="Close" class="oe_highlight"
+                                groups="mexi_it.group_it_request_it"
+                                modifiers='{"invisible": [["state", "!=", "in_progress"]]}'/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,submitted,approved,in_progress,done"/>
+                        <group modifiers='{"invisible": [["state", "!=", "rejected"]]}'>
+                            <field name="reject_reason" placeholder="Rejection reason..." nolabel="1"
+                                   groups="mexi_it.group_it_request_approver"/>
+                            <field name="reject_reason" readonly="1" nolabel="1"
+                                   groups="mexi_it.group_it_request_employee,mexi_it.group_it_request_it"/>
+                        </group>
+                           <group>
+                            <field name="resolution" placeholder="Describa la solución implementada..." nolabel="1"
+                                groups="mexi_it.group_it_request_it"
+                                modifiers='{"invisible": [["state", "!=", "in_progress"]]}'/>
+                            <field name="resolution" readonly="1" nolabel="1"
+                                groups="mexi_it.group_it_request_employee"
+                                modifiers='{"invisible": [["state", "!=", "done"]]}'/>
+                           </group>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="action_view_equipment" 
+                                    icon="fa-wrench" 
+                                    modifiers='{"invisible": [["equipment_employee_ids", "=", []]]}'>
+                                <field name="equipment_employee_ids" widget="statinfo" string="Employee Equipment"/>
+                            </button>
+                            <button class="oe_stat_button" type="object" name="action_view_department_equipment" 
+                                    icon="fa-building" 
+                                    modifiers='{"invisible": [["equipment_department_ids", "=", []]]}'>
+                                <field name="equipment_department_ids" widget="statinfo" string="Dept Equipment"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1" class="text-break"/>
+                            </h1>
+                            <div class="mb-3">
+                                <field name="request_type" widget="badge" readonly="1"
+                                       decoration-info="request_type == 'software'"
+                                       decoration-primary="request_type == 'asset'"
+                                       decoration-warning="request_type == 'support'"/>
+                                <field name="priority" widget="badge" readonly="1"
+                                       decoration-danger="priority == '2'"
+                                       decoration-warning="priority == '1'"
+                                       decoration-success="priority == '0'"/>
+                            </div>
+                            <h3>
+                                <field name="employee_id" 
+                                       modifiers='{"readonly": [["state", "!=", "draft"]]}'
+                                       placeholder="Select employee..."/>
+                            </h3>
+                        </div>
+                        
+                        <group>
+                            <group string="Request">
+                                <field name="request_type"
+                                       modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                <field name="priority" widget="priority"
+                                       modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                <field name="date_required" 
+                                       modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                            </group>
+                            <group string="Employee">
+                                <field name="department_id" readonly="1"/>
+                                <field name="job_id" readonly="1"/>
+                                <field name="manager_id" readonly="1" widget="many2one_avatar_user"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Descripción">
+                            <field name="description" nolabel="1"
+                                   placeholder="Describe your request in detail..."
+                                   modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Activo" modifiers='{"invisible": [["request_type", "!=", "asset"]]}'>
+                                <group>
+                                    <field name="asset_category"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="asset_qty"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="asset_reason"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="asset_spec"
+                                           placeholder="Ej: RAM 16GB, Procesador i7, SSD 512GB..."
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                </group>
+                            </page>
+                            <page string="Software" modifiers='{"invisible": [["request_type", "!=", "software"]]}'>
+                                <group>
+                                    <field name="software_name"
+                                           placeholder="Ej: Microsoft Office, Adobe Creative Suite..."
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="software_action"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="access_profile"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="access_validity"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="business_reason"
+                                           placeholder="Business justification..."
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                </group>
+                            </page>
+                            <page string="Soporte" modifiers='{"invisible": [["request_type", "!=", "support"]]}'>
+                                <group>
+                                    <field name="support_category"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                    <field name="support_impact"
+                                           modifiers='{"readonly": [["state", "!=", "draft"]]}'/>
+                                </group>
+                            </page>
+                            <page string="Información IT" groups="mexi_it.group_it_request_it,mexi_it.group_it_request_approver">
+                                <group>
+                                    <group>
+                                        <field name="assigned_it_user_id" widget="many2one_avatar_user"/>
+                                        <field name="days_since_creation" string="Days Since Creation"/>
+                                        <field name="days_in_current_state" string="Days in Current State"/>
+                                    </group>
+                                    <group string="Aprobación" modifiers='{"invisible": [["request_type", "=", "support"]]}'>
+                                        <field name="approved_by_id" widget="many2one_avatar_user"/>
+                                        <field name="approved_date" widget="datetime"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group string="Dates">
+                                        <field name="submitted_date" readonly="1" widget="datetime"/>
+                                        <field name="done_date" readonly="1" widget="datetime"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Equipment (Reference)">
+                                <group string="Equipment Assigned to Employee">
+                                    <field name="equipment_employee_ids" nolabel="1">
+                                        <list>
+                                            <field name="name"/>
+                                            <field name="category_id"/>
+                                            <field name="serial_no"/>
+                                            <field name="employee_id" widget="many2one_avatar_user"/>
+                                        </list>
+                                    </field>
+                                </group>
+                                <group string="Department Equipment">
+                                    <field name="equipment_department_ids" nolabel="1">
+                                        <list>
+                                            <field name="name"/>
+                                            <field name="category_id"/>
+                                            <field name="serial_no"/>
+                                            <field name="department_id"/>
+                                        </list>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter options="{'open_attachments': false}"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="it_request_action" model="ir.actions.act_window">
+            <field name="name">IT Requests</field>
+            <field name="res_model">it.request</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="search_view_id" ref="it_request_view_search"/>
+        </record>
+
+        <record id="it_request_action_pending_approval" model="ir.actions.act_window">
+            <field name="name">Pendientes de aprobación</field>
+            <field name="res_model">it.request</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">[("state", "=", "submitted"), ("request_type", "in", ["asset", "software"])]</field>
+            <field name="search_view_id" ref="it_request_view_search"/>
+        </record>
+
+        <record id="it_request_action_it_queue" model="ir.actions.act_window">
+            <field name="name">Cola IT</field>
+            <field name="res_model">it.request</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">
+                ["|",
+                 "&amp;", ("request_type", "=", "support"),
+                         ("state", "in", ["submitted", "in_progress", "done"]),
+                 "&amp;", ("request_type", "in", ["asset", "software"]),
+                         ("state", "in", ["approved", "in_progress", "done"])]
+            </field>
+            <field name="search_view_id" ref="it_request_view_search"/>
+        </record>
+
+        <menuitem id="menu_it_requests_root" name="IT Requests" sequence="10"/>
+        <menuitem id="menu_it_requests_my" name="My Requests"
+                  parent="menu_it_requests_root"
+                  action="it_request_action"
+                  groups="mexi_it.group_it_request_employee"
+                  sequence="10"/>
+        <menuitem id="menu_it_requests_pending_approval" name="Pendientes de aprobación"
+                  parent="menu_it_requests_root"
+                  action="it_request_action_pending_approval"
+                  groups="mexi_it.group_it_request_approver"
+                  sequence="20"/>
+        <menuitem id="menu_it_requests_it_queue" name="Cola IT"
+                  parent="menu_it_requests_root"
+                  action="it_request_action_it_queue"
+                  groups="mexi_it.group_it_request_it"
+                  sequence="30"/>
+    </data>
+</odoo>

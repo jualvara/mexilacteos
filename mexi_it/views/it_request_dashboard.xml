@@ -1,0 +1,68 @@
+<!-- Copyright 2026 Mexilacteos (https://www.mexilacteos.com)
+     License OPL-1.0 -->
+<odoo>
+    <data>
+        <!-- Pivot View -->
+        <record id="it_request_view_pivot" model="ir.ui.view">
+            <field name="name">it.request.view.pivot</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <pivot string="IT Requests Analysis">
+                    <field name="state" type="col"/>
+                    <field name="request_type" type="row"/>
+                    <field name="priority" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- Graph View -->
+        <record id="it_request_view_graph" model="ir.ui.view">
+            <field name="name">it.request.view.graph</field>
+            <field name="model">it.request</field>
+            <field name="arch" type="xml">
+                <graph string="IT Requests Analysis" type="bar">
+                    <field name="state"/>
+                    <field name="request_type" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Dashboard Action -->
+        <record id="it_request_action_dashboard" model="ir.actions.act_window">
+            <field name="name">Dashboard IT</field>
+            <field name="res_model">it.request</field>
+            <field name="view_mode">graph,pivot,list</field>
+            <field name="search_view_id" ref="it_request_view_search"/>
+            <field name="context">{
+                'search_default_open_requests': 1,
+            }</field>
+        </record>
+
+        <!-- Favorite: Open by Priority -->
+        <record id="it_request_search_open_by_priority" model="ir.filters">
+            <field name="name">Abiertas por prioridad</field>
+            <field name="model_id">it.request</field>
+            <field name="domain">[('state', 'not in', ['done', 'rejected'])]</field>
+            <field name="context">{'group_by': ['priority', 'state']}</field>
+            <field name="is_default" eval="False"/>
+            <field name="sort">["priority desc", "create_date desc"]</field>
+        </record>
+
+        <!-- Favorite: Time in State -->
+        <record id="it_request_search_time_in_state" model="ir.filters">
+            <field name="name">Tiempo en estado</field>
+            <field name="model_id">it.request</field>
+            <field name="domain">[]</field>
+            <field name="context">{'group_by': ['state']}</field>
+            <field name="is_default" eval="False"/>
+            <field name="sort">["days_in_current_state desc"]</field>
+        </record>
+
+        <!-- Menu for Dashboard -->
+        <menuitem id="menu_it_requests_dashboard" name="Dashboard"
+              parent="menu_it_requests_root"
+              action="it_request_action_dashboard"
+              groups="mexi_it.group_it_request_it"
+              sequence="5"/>
+    </data>
+</odoo>

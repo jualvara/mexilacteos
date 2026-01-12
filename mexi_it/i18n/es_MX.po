@@ -1,0 +1,1021 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mexi_it
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20251222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-12 02:54+0000\n"
+"PO-Revision-Date: 2026-01-12 02:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_kanban
+msgid ""
+"<span class=\"badge text-bg-secondary\">\n"
+"                                                    <i class=\"fa fa-user-times\"/> Sin asignar\n"
+"                                                </span>"
+msgstr ""
+"<span class=\"badge text-bg-secondary\">\n"
+"                                                    <i class=\"fa fa-user-times\"/> Sin asignar\n"
+"                                                </span>"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Abiertas"
+msgstr "Abiertas"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__software_action__access
+msgid "Access"
+msgstr "Acceso"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__access_profile
+msgid "Access Profile"
+msgstr "Perfil de Acceso"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__access_validity
+msgid "Access Validity"
+msgstr "Vigencia de Acceso"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Access profile"
+msgstr "Perfil de acceso"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Access validity"
+msgstr "Vigencia de acceso"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_needaction
+msgid "Action Needed"
+msgstr "Acción Requerida"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__software_action
+msgid "Action Required"
+msgstr "Acción Requerida"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Excepción de Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícono de Tipo de Actividad"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Activo"
+msgstr "Activo"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__access_profile__admin
+msgid "Admin"
+msgstr "Administrador"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Agrupar por"
+msgstr "Agrupar por"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__approved_date
+msgid "Approval Date"
+msgstr "Fecha de Aprobación"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__approved_by_id
+msgid "Approved By"
+msgstr "Aprobado Por"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Aprobación"
+msgstr "Aprobación"
+
+#. module: mexi_it
+#: model:res.groups,name:mexi_it.group_it_request_approver
+msgid "IT Approvers"
+msgstr "Aprobadores IT"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Asignado a"
+msgstr "Asignado a"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__request_type__asset
+msgid "Asset"
+msgstr "Activo"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__asset_category
+msgid "Asset Category"
+msgstr "Categoría de Activo"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Asset category is required."
+msgstr "La categoría del activo es requerida."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Asset quantity must be greater than zero."
+msgstr "La cantidad de activos debe ser mayor a cero."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Asset reason is required."
+msgstr "La razón del activo es requerida."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Asset/software requests must be approved to start."
+msgstr "Las solicitudes de activo/software deben ser aprobadas para iniciar."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Assign an IT technician to request %s"
+msgstr "Asignar un técnico IT a la solicitud %s"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__assigned_it_user_id
+msgid "Assigned IT User"
+msgstr "Usuario IT Asignado"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de Adjuntos"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__access_profile__basic
+msgid "Basic"
+msgstr "Básico"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_impact__blocker
+msgid "Blocker"
+msgstr "Bloqueante"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__support_impact
+msgid "Business Impact"
+msgstr "Impacto en el Negocio"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__business_reason
+msgid "Business Justification"
+msgstr "Justificación de Negocio"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Business justification..."
+msgstr "Justificación de negocio..."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Business reason"
+msgstr "Razón de negocio"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: mexi_it
+#: model:ir.actions.act_window,name:mexi_it.it_request_action_it_queue
+#: model:ir.ui.menu,name:mexi_it.menu_it_requests_it_queue
+msgid "Cola IT"
+msgstr "Cola IT"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__color
+msgid "Color Index"
+msgstr "Índice de Color"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__done_date
+msgid "Completion Date"
+msgstr "Fecha de Finalización"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: mexi_it
+#: model:ir.ui.menu,name:mexi_it.menu_it_requests_dashboard
+msgid "Dashboard"
+msgstr "Tablero"
+
+#. module: mexi_it
+#: model:ir.actions.act_window,name:mexi_it.it_request_action_dashboard
+msgid "Dashboard IT"
+msgstr "Tablero IT"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Dates"
+msgstr "Fechas"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_list
+msgid "Days Elapsed"
+msgstr "Días Transcurridos"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__days_since_creation
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Days Since Creation"
+msgstr "Días Desde Creación"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__days_in_current_state
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Days in Current State"
+msgstr "Días en Estado Actual"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_list
+msgid "Days in State"
+msgstr "Días en Estado"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_impact__degraded
+msgid "Degraded"
+msgstr "Degradado"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__department_id
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Department"
+msgstr "Departamento"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__equipment_department_ids
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Department Equipment"
+msgstr "Equipo del Departamento"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Dept Equipment"
+msgstr "Equipo Depto"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Describa la solución implementada..."
+msgstr "Describa la solución implementada..."
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Describe your request in detail..."
+msgstr "Describa su solicitud en detalle..."
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Description is required to submit."
+msgstr "La descripción es requerida para enviar."
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__display_name
+msgid "Display Name"
+msgstr "Nombre Mostrado"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__done
+msgid "Done"
+msgstr "Completado"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Ej: Microsoft Office, Adobe Creative Suite..."
+msgstr "Ej: Microsoft Office, Adobe Creative Suite..."
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Ej: RAM 16GB, Procesador i7, SSD 512GB..."
+msgstr "Ej: RAM 16GB, Procesador i7, SSD 512GB..."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__email
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__employee_id
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__equipment_employee_ids
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Employee Equipment"
+msgstr "Equipo del Empleado"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "En proceso"
+msgstr "En proceso"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Equipment (Reference)"
+msgstr "Equipos (Referencia)"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Equipment Assigned to Employee"
+msgstr "Equipos Asignados al Empleado"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Estado"
+msgstr "Estado"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_reason__failure
+msgid "Failure"
+msgstr "Falla"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__name
+msgid "Folio"
+msgstr "Folio"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ícono Font Awesome ej. fa-tasks"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_reason__growth
+msgid "Growth"
+msgstr "Crecimiento"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__hardware
+msgid "Hardware"
+msgstr "Hardware"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__priority__2
+msgid "High"
+msgstr "Alta"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mexi_it
+#: model:res.groups,name:mexi_it.group_it_request_it
+msgid "IT Operadores"
+msgstr "IT Operadores"
+
+#. module: mexi_it
+#: model:ir.model,name:mexi_it.model_it_request
+msgid "IT Request"
+msgstr "Solicitud IT"
+
+#. module: mexi_it
+#: model:ir.actions.act_window,name:mexi_it.it_request_action
+#: model:ir.ui.menu,name:mexi_it.menu_it_requests_root
+msgid "IT Requests"
+msgstr "Solicitudes IT"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_graph
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_pivot
+msgid "IT Requests Analysis"
+msgstr "Análisis de Solicitudes IT"
+
+#. module: mexi_it
+#: model:ir.module.category,name:mexi_it.module_category_it_requests
+msgid "IT Requests"
+msgstr "Solicitudes IT"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_exception_icon
+msgid "Icon"
+msgstr "Ícono"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ícono para indicar una actividad de excepción."
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__message_has_error
+#: model:ir.model.fields,help:mexi_it.field_it_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen error de entrega."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__in_progress
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Información IT"
+msgstr "Información IT"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__software_action__install
+msgid "Install"
+msgstr "Instalar"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__job_id
+msgid "Job Position"
+msgstr "Puesto de Trabajo"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__keyboard
+msgid "Keyboard"
+msgstr "Teclado"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__laptop
+msgid "Laptop"
+msgstr "Laptop"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__priority__0
+msgid "Low"
+msgstr "Baja"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__manager_id
+msgid "Manager"
+msgstr "Gerente"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__priority__1
+msgid "Medium"
+msgstr "Media"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Entrega de Mensaje"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_impact__minor
+msgid "Minor"
+msgstr "Menor"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Missing required fields: %s"
+msgstr "Faltan campos requeridos: %s"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__monitor
+msgid "Monitor"
+msgstr "Monitor"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__mouse
+msgid "Mouse"
+msgstr "Mouse"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Límite de Mi Actividad"
+
+#. module: mexi_it
+#: model:ir.ui.menu,name:mexi_it.menu_it_requests_my
+msgid "My Requests"
+msgstr "Mis Solicitudes"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__network
+msgid "Network"
+msgstr "Red"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_reason__new_hire
+msgid "New Hire"
+msgstr "Nueva Contratación"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Evento de Calendario de Próxima Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Límite de Próxima Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de Próxima Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de Próxima Actividad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Acciones"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren acción"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only asset or software requests can be approved."
+msgstr "Solo las solicitudes de activo o software pueden ser aprobadas."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only asset or software requests can be rejected."
+msgstr "Solo las solicitudes de activo o software pueden ser rechazadas."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only draft requests can be submitted."
+msgstr "Solo las solicitudes en borrador pueden ser enviadas."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only in-progress requests can be done."
+msgstr "Solo las solicitudes en progreso pueden ser completadas."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only submitted requests can be approved."
+msgstr "Solo las solicitudes enviadas pueden ser aprobadas."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Only submitted requests can be rejected."
+msgstr "Solo las solicitudes enviadas pueden ser rechazadas."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__other
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__other
+msgid "Other"
+msgstr "Otro"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Pendientes aprobación"
+msgstr "Pendientes aprobación"
+
+#. module: mexi_it
+#: model:ir.actions.act_window,name:mexi_it.it_request_action_pending_approval
+#: model:ir.ui.menu,name:mexi_it.menu_it_requests_pending_approval
+msgid "Pendientes de aprobación"
+msgstr "Pendientes de aprobación"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__access_validity__permanent
+msgid "Permanent"
+msgstr "Permanente"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Please assign an IT user before starting work."
+msgstr "Por favor asigne un usuario IT antes de iniciar el trabajo."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Please review and approve request %s"
+msgstr "Por favor revise y apruebe la solicitud %s"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__printer
+msgid "Printer"
+msgstr "Impresora"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__asset_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__rating_ids
+msgid "Ratings"
+msgstr "Valoraciones"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__asset_reason
+msgid "Reason"
+msgstr "Razón"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Reject"
+msgstr "Rechazar"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Reject reason is required."
+msgstr "La razón de rechazo es requerida."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__rejected
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__reject_reason
+msgid "Rejection Reason"
+msgstr "Razón de Rechazo"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Rejection reason..."
+msgstr "Razón del rechazo..."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_reason__replacement
+msgid "Replacement"
+msgstr "Reemplazo"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__request_type
+msgid "Request Type"
+msgstr "Tipo de Solicitud"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Request details can only be modified in draft state."
+msgstr "Los detalles de la solicitud solo pueden modificarse en estado borrador."
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__date_required
+msgid "Required By"
+msgstr "Requerido Para"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__resolution
+msgid "Resolution"
+msgstr "Resolución"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Resolution is required to finish."
+msgstr "La resolución es requerida para finalizar."
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de Entrega de SMS"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Select employee..."
+msgstr "Seleccione empleado..."
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__asset_category__server
+msgid "Server"
+msgstr "Servidor"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__request_type__software
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__support_category__software
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Software"
+msgstr "Software"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__software_name
+msgid "Software Name"
+msgstr "Nombre de Software"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Software action"
+msgstr "Acción de software"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Software name"
+msgstr "Nombre de software"
+
+#. module: mexi_it
+#: model:res.groups,name:mexi_it.group_it_request_employee
+msgid "Requester (Employee)"
+msgstr "Solicitante (Empleado)"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Soporte"
+msgstr "Soporte"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Soporte por tomar"
+msgstr "Soporte por tomar"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__access_profile__standard
+msgid "Standard"
+msgstr "Estándar"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Start"
+msgstr "Iniciar"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__state
+msgid "State"
+msgstr "Estado"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencido: La fecha límite ya pasó\n"
+"Hoy: La actividad es para hoy\n"
+"Planificado: Actividades futuras."
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_form
+msgid "Submit"
+msgstr "Enviar"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__state__submitted
+msgid "Submitted"
+msgstr "Enviado"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__submitted_date
+msgid "Submitted Date"
+msgstr "Fecha de Envío"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__request_type__support
+msgid "Support"
+msgstr "Soporte"
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__support_category
+msgid "Support Category"
+msgstr "Categoría de Soporte"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Support category is required."
+msgstr "La categoría de soporte es requerida."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Support impact is required."
+msgstr "El impacto del soporte es requerido."
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Support request %s needs attention"
+msgstr "La solicitud de soporte %s necesita atención"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Support requests must be submitted to start."
+msgstr "Las solicitudes de soporte deben ser enviadas para iniciar."
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__asset_spec
+msgid "Technical Specifications"
+msgstr "Especificaciones Técnicas"
+
+#. module: mexi_it
+#: model:ir.model.fields.selection,name:mexi_it.selection__it_request__access_validity__temporary
+msgid "Temporary"
+msgstr "Temporal"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_search
+msgid "Tipo"
+msgstr "Tipo"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción en el registro."
+
+#. module: mexi_it
+#: model:ir.model.fields,field_description:mexi_it.field_it_request__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del Sitio Web"
+
+#. module: mexi_it
+#: model:ir.model.fields,help:mexi_it.field_it_request__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "Work on approved request %s"
+msgstr "Trabajar en la solicitud aprobada %s"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_kanban
+msgid "days"
+msgstr "días"
+
+#. module: mexi_it
+#: model_terms:ir.ui.view,arch_db:mexi_it.it_request_view_kanban
+msgid "days in state"
+msgstr "días en estado"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "→ Approved by %s"
+msgstr "→ Aprobado por %s"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "→ Completed by %s. Resolution: %s"
+msgstr "→ Completado por %s. Resolución: %s"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "→ Rejected by %s. Reason: %s"
+msgstr "→ Rechazado por %s. Razón: %s"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "→ Submitted by %s"
+msgstr "→ Enviado por %s"
+
+#. module: mexi_it
+#. odoo-python
+#: code:addons/mexi_it/models/it_request.py:0
+msgid "→ Work started by %s"
+msgstr "→ Trabajo iniciado por %s"

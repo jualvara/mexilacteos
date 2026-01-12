@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2026 Mexilacteos (https://www.mexilacteos.com)
-     License Other propietary -->
+     License OPL-1.0 -->
 <odoo>
     <data noupdate="1">
         <record id="module_category_it_requests" model="ir.module.category">
-            <field name="name">IT Solicitudes</field>
+            <field name="name">IT Requests</field>
         </record>
 
         <record id="group_it_request_employee" model="res.groups">
-            <field name="name">Solicitante (Empleado)</field>
+            <field name="name">Requester (Employee)</field>
             <field name="category_id" ref="module_category_it_requests"/>
         </record>
 
         <record id="group_it_request_approver" model="res.groups">
-            <field name="name">Aprobadores IT</field>
+            <field name="name">IT Approvers</field>
             <field name="category_id" ref="module_category_it_requests"/>
         </record>
 

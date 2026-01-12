@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2026 Mexilacteos (https://www.mexilacteos.com)
-     License Other propietary -->
+     License OPL-1.0 -->
 <odoo>
     <data noupdate="1">
         <record id="seq_it_request" model="ir.sequence">

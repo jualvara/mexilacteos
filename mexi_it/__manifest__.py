@@ -7,6 +7,16 @@
     "license": "Other proprietary",
     "application": True,
     "depends": ["base", "mail", "hr", "maintenance"],
-    "data": ["data/it_request_sequence.xml"],
-    "test": [],
+    "data": [
+        "security/it_request_groups.xml",
+        "security/ir.model.access.csv",
+        "security/it_request_rules.xml",
+        "data/it_request_sequence.xml",
+        "views/it_request_views.xml",
+        "views/it_request_dashboard.xml",
+    ],
+    "assets": {
+        "web.assets_backend": [],
+    },
+    "images": ["static/description/icon.png"],
 }
