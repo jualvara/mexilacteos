@@ -507,7 +507,7 @@ Implemented via `security/it_request_rules.xml`:
 
 ### Code Quality Standards
 
-This module follows **OCA (Odoo Community Association)** and **QUBIQ** standards:
+This module follows **OCA (Odoo Community Association)** standards:
 
 - **Python**: PEP8, black (line length: 99), isort, flake8
 - **XML**: 4-space indentation, double quotes
@@ -591,7 +591,6 @@ Framework prepared for:
 - Integration tests (workflows)
 - Security tests (access rules)
 
-Currently: `"test": []` (manual QA process)
 
 ---
 
@@ -604,12 +603,6 @@ Currently: `"test": []` (manual QA process)
 3. **Computed fields**: Minimal database queries
 4. **View optimization**: Only necessary fields in tree view
 
-### Scalability
-
-Tested with:
-- 500+ concurrent requests
-- 100+ employees
-- Multi-department organizations
 
 **Recommended limits:**
 - Max open requests per employee: 20
@@ -632,22 +625,9 @@ For licensing inquiries: [contact information]
 
 ---
 
-## 🤝 Support
-
-### Documentation
-
-- **User Manual**: [Link to user documentation]
-- **Technical Guide**: `CGuide.md` in repository root
-- **Use Case**: `Caso_de_uso_Odoo_Centralizacion_procesos_IT.md`
-
 ### Contact
 
 - **Repository**: [GitHub URL]
-- **Issues**: Report via GitHub Issues
-- **Email**: support@mexilacteos.com
-- **Developer**: Contact repository owner
-
----
 
 ## 📚 Additional Resources
 
