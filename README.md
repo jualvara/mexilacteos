@@ -5,6 +5,9 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-green)](https://www.python.org/)
 
 > **Professional IT Request Management Module for Odoo 18 Community**
+>
+> **avaliable**
+> **http://34.16.78.47:8069/**
 
 Enterprise-grade solution for centralizing IT processes including asset procurement, software access management, and technical support requests with comprehensive approval workflows and security controls.
 
